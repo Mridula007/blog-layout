@@ -1,43 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Blog</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>My Blog</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="post.html">Posts</a>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <h1>Welcome to My Blog</h1>
+      <p class="subtitle">Thoughts, stories, and ideas shared with the world</p>
+      <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
+    </div>
   </header>
 
-  <main>
-    <section id="create-post">
-      <h2>Create a Post</h2>
-      <form id="postForm">
-        <input type="text" id="title" placeholder="Title" required />
-        <textarea id="content" placeholder="Write your post here..." required></textarea>
-        <button type="submit">Add Post</button>
-      </form>
-    </section>
-  </main>
+  <section class="about-section container">
+    <h2>About Me</h2>
+    <p>Hello! I'm a blogger who loves sharing ideas, tutorials, and inspirations. This space is where I write about design, tech, life, and everything in between.</p>
+  </section>
+
+  <section class="posts-section container">
+    <h2>Recent Posts</h2>
+    <div class="posts-grid">
+      <div class="post-card">
+        <h3><a href="post.html">A Colorful Blog Post</a></h3>
+        <p class="card-date">April 22, 2025</p>
+        <p>Explore how to style your blog beautifully and switch to dark mode with ease.</p>
+      </div>
+      <div class="post-card">
+        <h3><a href="post.html">Second Blog Post</a></h3>
+        <p class="card-date">April 20, 2025</p>
+        <p>This is a placeholder for your next blog post. Add real content here soon!</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
 
   <script>
-    const form = document.getElementById('postForm');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const title = document.getElementById('title').value;
-      const content = document.getElementById('content').value;
-      const posts = JSON.parse(localStorage.getItem('posts') || '[]');
-      posts.push({ title, content, timestamp: new Date().toISOString() });
-      localStorage.setItem('posts', JSON.stringify(posts));
-      alert('Post added!');
-      form.reset();
-    });
+    function toggleTheme() {
+      const html = document.documentElement;
+      html.setAttribute('data-theme', html.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
+    }
   </script>
 </body>
 </html>
