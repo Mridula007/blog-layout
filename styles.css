@@ -1,71 +1,60 @@
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  color: #222;
+  background: #fff;
+  color: #000;
   transition: all 0.3s ease;
 }
 
 header {
-  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  background: linear-gradient(to right, #ff512f, #dd2476);
   color: white;
-  padding: 1em;
   text-align: center;
+  padding: 1em 0;
 }
 
 nav {
-  margin-top: 1em;
+  margin: 1em 0;
 }
 
 nav a {
-  color: white;
   margin: 0 1em;
+  color: white;
   text-decoration: none;
+  font-size: 1.2em;
 }
 
-main {
-  padding: 2em;
-}
-
-.blog-post, .comments, .thoughts-form, .intro {
-  background: #fef1ec;
-  padding: 1.5em;
+button {
+  margin-top: 1em;
+  padding: 0.5em 1em;
+  font-size: 1em;
   border-radius: 10px;
-  margin-bottom: 2em;
-}
-
-button#toggle-dark {
-  margin-left: 1em;
-  padding: 0.4em 1em;
-  background: white;
-  border: none;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-/* Dark Mode */
-body.dark-mode {
-  background-color: #111;
-  color: #eee;
+.blog-post, .comment-section, #your-thoughts {
+  background: #fdeee6;
+  margin: 2em auto;
+  padding: 1.5em;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-body.dark-mode header {
-  background: linear-gradient(45deg, #111, #444);
+.dark-mode {
+  background: #121212;
+  color: #f0f0f0;
 }
 
-body.dark-mode .blog-post,
-body.dark-mode .comments,
-body.dark-mode .thoughts-form,
-body.dark-mode .intro {
-  background: #1e1e1e;
+.dark-mode .blog-post,
+.dark-mode .comment-section,
+.dark-mode #your-thoughts {
+  background: #2c2c2c;
+  color: #f0f0f0;
 }
 
-body.dark-mode nav a {
-  color: #ddd;
-}
-
-body.dark-mode button#toggle-dark {
-  background: #444;
-  color: #fff;
+iframe {
+  border: none;
+  border-radius: 10px;
 }
