@@ -1,59 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>View Posts</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body class="theme-light">
+---
+layout: home
+title: "Posts"
+permalink: /posts/
+author_profile: true
+---
 
-  <header>
-    <h1>All Blog Posts</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="posts.html">Posts</a>
-    </nav>
-  </header>
+<!-- Welcome Section -->
+<div class="page__custom-message">
+  <h2>Welcome to the Blog Posts Page!</h2>
+  <p>Explore the latest blogs shared by our contributors. Click a title to read more.</p>
+</div>
 
-  <div class="theme-controls">
-    <button onclick="setTheme('theme-light')">Light</button>
-    <button onclick="setTheme('theme-blue')">Blue</button>
-    <button onclick="setTheme('theme-pink')">Pink</button>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  </div>
+<!-- Blog Post List -->
+<ul class="post-list">
+  {% for post in paginator.posts %}
+    <li class="post-item">
+      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+      <p class="post-meta">
+        {{ post.date | date: "%B %d, %Y" }}{% if post.author %} • by {{ post.author }}{% endif %}
+      </p>
+      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
+    </li>
+  {% endfor %}
+</ul>
 
-  <main id="postList"></main>
+<!-- Pagination -->
+{% if paginator.total_pages > 1 %}
+  <nav class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
+    {% endif %}
 
-  <footer>
-    <p>Created by Mridula S</p>
-  </footer>
+    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
 
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
-    }
-
-    function setTheme(theme) {
-      document.body.className = theme;
-    }
-
-    const postList = document.getElementById("postList");
-    const posts = JSON.parse(localStorage.getItem("posts")) || [];
-
-    if (posts.length === 0) {
-      postList.innerHTML = "<p>No posts yet.</p>";
-    } else {
-      posts.forEach(post => {
-        postList.innerHTML += `
-          <article class="post-card">
-            <h3>${post.title}</h3>
-            <p><strong>Author:</strong> ${post.author}</p>
-            <p>${post.content}</p>
-          </article>
-        `;
-      });
-    }
-  </script>
-</body>
-</html>
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
+    {% endif %}
+  </nav>
+{% endif %}
