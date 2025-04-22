@@ -1,50 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Colorful Blog</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1>My Colorful Blog</h1>
-      <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
-    </div>
+  <header>
+    <h1>Welcome to My Colorful Blog</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="post.html">Posts</a>
+      <a href="thoughts.html">Your Thoughts</a>
+      <button id="toggle-dark">Toggle Dark Mode</button>
+    </nav>
   </header>
-
-  <main class="container">
+  <main>
     <section class="intro">
-      <h2>Welcome!</h2>
-      <p>Explore colorful stories and ideas. Click on a post to read more.</p>
-    </section>
-
-    <section class="posts">
-      <article class="post-card">
-        <h3><a href="post.html">A Colorful Blog Post</a></h3>
-        <p>This post shows a vibrant blog layout with comment support!</p>
-      </article>
-    </section>
-
-    <section class="your-thoughts">
-      <h2>Share Your Thoughts</h2>
-      <p>Want to express something? Submit your own thoughts like a mini blog post!</p>
-      <a href="https://forms.gle/oG6YgJ3HY9yHoRYH7" target="_blank" class="thought-btn">Submit Your Thought</a>
+      <h2>Explore Blogs & Share Your Thoughts</h2>
+      <p>This blog is your space to read, comment, and contribute!</p>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </div>
+  <footer>
+    <p>&copy; 2025 My Blog. All rights reserved.</p>
   </footer>
-
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      html.setAttribute('data-theme', html.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
