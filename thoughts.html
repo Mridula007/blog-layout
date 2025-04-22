@@ -3,32 +3,111 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Share Your Thoughts</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Your Thoughts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Baloo 2', cursive;
+      margin: 0;
+      padding: 0;
+      background-color: #fefefe;
+      color: #222;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      background-color: #a2d2ff;
+      color: #1a1a1a;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #1a1a1a;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    .toggle-btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      background-color: #1a73e8;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    iframe {
+      width: 100%;
+      height: 700px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Dark Mode */
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #f1f1f1;
+    }
+
+    body.dark-mode header {
+      background-color: #333;
+      color: #f1f1f1;
+    }
+
+    body.dark-mode nav a {
+      color: #f1f1f1;
+    }
+
+    body.dark-mode .toggle-btn {
+      background-color: #f1f1f1;
+      color: #1a1a1a;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Share Your Thoughts</h1>
+    <h1>Your Thoughts</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
+      <a href="blog.html">Posts</a>
       <a href="thoughts.html">Thoughts</a>
-      <button id="theme-toggle">Toggle Dark Mode</button>
     </nav>
+    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </header>
 
-  <main>
-    <section>
-      <h2>We Value Your Thoughts</h2>
-      <p>Use the form below to share your thoughts with us:</p>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfrsekk1v6pSCBHOaH_LzlkihRDaJ2G2vgwJ8TxRk_mVEXK0g/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </section>
-  </main>
+  <div class="container">
+    <h2>Leave a Thought</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccA6cFVqAhEtAtGcKtWg1lazMJgRjA1zx8fJtd8RQdm6FbKQ/viewform?embedded=true">Loading…</iframe>
+  </div>
 
-  <footer>
-    <p>&copy; 2025 Your Blog</p>
-  </footer>
-
-  <script src="script.js"></script>
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
 </body>
 </html>
