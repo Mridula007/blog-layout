@@ -1,42 +1,31 @@
 body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  background: #f4f9fc;
+  font-family: 'Comic Sans MS', sans-serif;
+  background-color: #f0fdf4;
   color: #222;
-  transition: all 0.3s ease;
+  margin: 0;
+  padding: 0;
 }
 
 header {
-  text-align: center;
+  background-color: #cce7ff;
   padding: 1rem;
-  background: #e1f0ff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
 header h1 {
+  margin: 0;
   font-size: 2.5rem;
-  color: #4682b4;
 }
 
-header span {
-  color: #1e90ff;
+nav {
+  margin-top: 0.5rem;
 }
 
 nav a {
   margin: 0 1rem;
   text-decoration: none;
   color: #0077cc;
-  font-size: 1.1rem;
-}
-
-button#toggle-dark {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  background: #1e90ff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
+  font-weight: bold;
 }
 
 main {
@@ -44,18 +33,22 @@ main {
 }
 
 .dark-mode {
-  background: #121212;
+  background-color: #111;
   color: #eee;
 }
 
 .dark-mode header {
-  background: #1f1f1f;
+  background-color: #222;
 }
 
 .dark-mode nav a {
-  color: #90c9ff;
+  color: #66ccff;
 }
 
-.dark-mode button#toggle-dark {
-  background: #444;
+button#darkModeToggle {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 5px 10px;
+  font-family: monospace;
 }
