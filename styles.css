@@ -1,8 +1,15 @@
 :root {
-  --bg-color: #121212;
-  --text-color: #e0e0e0;
-  --accent-color: #00ffff;
-  --header-color: #1e1e1e;
+  --bg-color: #f9f9f9;
+  --text-color: #222;
+  --accent-color: #4e9bde;
+  --header-bg: #ffffff;
+  --footer-bg: #f1f1f1;
+
+  --dark-bg: #121212;
+  --dark-text: #e0e0e0;
+  --dark-accent: #70cfff;
+  --dark-header: #1e1e1e;
+  --dark-footer: #1a1a1a;
 }
 
 body {
@@ -10,30 +17,31 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background 0.3s, color 0.3s;
 }
 
-header {
-  background-color: var(--header-color);
+header, footer {
+  background-color: var(--header-bg);
   padding: 1rem;
   text-align: center;
-  border-bottom: 2px solid var(--accent-color);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  color: var(--accent-color);
 }
 
 nav {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 
 nav a {
   margin: 0 1rem;
   color: var(--accent-color);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 nav a:hover {
@@ -42,7 +50,7 @@ nav a:hover {
 
 button#theme-toggle {
   background: var(--accent-color);
-  color: var(--bg-color);
+  color: #fff;
   border: none;
   padding: 0.5rem 1rem;
   margin-left: 1rem;
@@ -58,13 +66,26 @@ main {
 iframe {
   border: none;
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-footer {
-  background-color: var(--header-color);
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  font-size: 0.9rem;
+/* Dark Mode */
+body.dark {
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
+}
+
+body.dark header,
+body.dark footer {
+  background-color: var(--dark-header);
+}
+
+body.dark nav a {
+  color: var(--dark-accent);
+}
+
+body.dark button#theme-toggle {
+  background: var(--dark-accent);
+  color: #000;
 }
