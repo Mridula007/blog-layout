@@ -8,43 +8,35 @@
 </head>
 <body>
   <header>
-    <h1>Blog Posts</h1>
+    <h1>All Blog Posts</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="blog.html">Posts</a>
+      <a href="blog.html">Blog</a>
       <a href="thoughts.html">Thoughts</a>
-      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      <button id="theme-toggle">Toggle Dark Mode</button>
     </nav>
   </header>
 
   <main>
-    <section id="posts-container">
-      <p>Loading posts...</p>
+    <section>
+      <h2>Recent Posts</h2>
+      <p>Submissions are collected via the form below and displayed here (data pulling can be added via Apps Script or Sheet API).</p>
+      <ul>
+        <li><strong>Example Post 1</strong>: This is a sample blog post.</li>
+        <li><strong>Example Post 2</strong>: Another example blog entry.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Submit a New Blog Post</h2>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0UEurE81xRkwZk6AkDGLERzyqMHBeKmP5cVZbYPg6aYVz-Q/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
   </main>
 
-  <script>
-    const sheetURL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTZQdNWrXOdTw8LJcuzIQD_3XojHZXXJX_nDpvQJcb0ZMWr1aCN9_Ff0T-GyCxofzPA5DUWlycSGJtr/pub?output=csv';
+  <footer>
+    <p>&copy; 2025 Your Blog</p>
+  </footer>
 
-    fetch(sheetURL)
-      .then(response => response.text())
-      .then(data => {
-        const rows = data.split('\n').slice(1); // skip header
-        const container = document.getElementById('posts-container');
-        container.innerHTML = '';
-        rows.forEach(row => {
-          const [timestamp, title, content] = row.split(',');
-          if (title && content) {
-            const post = document.createElement('div');
-            post.className = 'post';
-            post.innerHTML = `<h3>${title}</h3><p>${content}</p>`;
-            container.appendChild(post);
-          }
-        });
-      })
-      .catch(error => {
-        document.getElementById('posts-container').innerHTML = '<p>Error loading posts.</p>';
-      });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
