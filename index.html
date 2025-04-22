@@ -3,69 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <title>My Blog</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f9f9f9;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    .post {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 700px;
-    }
-    .post-title {
-      font-size: 24px;
-      color: #2c3e50;
-      margin-bottom: 10px;
-    }
-    .post-content {
-      font-size: 16px;
-      color: #555;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <header>
+    <h1>Welcome to Our Blog</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="posts.html">View Posts</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQeTJIO5dbwqNjQIzwuhFCnYe-FLSfCePAxFUuBve545WOGw/viewform?usp=dialog" target="_blank">Submit a Post</a>
+    </nav>
+  </header>
 
-  <h1>Welcome to My Blog</h1>
-  <div id="posts-container"></div>
+  <main>
+    <section>
+      <h2>Start Reading or Share Your Thoughts</h2>
+      <p>Click "View Posts" to read what others have shared, or "Submit a Post" to share your ideas.</p>
+    </section>
+  </main>
 
-  <script>
-    const posts = [
-      {
-        title: "My First Blog Post",
-        content: "This is the content of my first blog post. I'm excited to start blogging!"
-      },
-      {
-        title: "Learning GitHub Pages",
-        content: "I just learned how to deploy a site using GitHub Pages. It's really easy and free!"
-      },
-      {
-        title: "Future Plans",
-        content: "I plan to add more features like comments, categories, and user submissions soon."
-      }
-    ];
-
-    const container = document.getElementById("posts-container");
-    posts.forEach(post => {
-      const postDiv = document.createElement("div");
-      postDiv.className = "post";
-      postDiv.innerHTML = `
-        <div class="post-title">${post.title}</div>
-        <div class="post-content">${post.content}</div>
-      `;
-      container.appendChild(postDiv);
-    });
-  </script>
-
+  <footer>
+    <p>Created by Mridula S</p>
+  </footer>
 </body>
 </html>
