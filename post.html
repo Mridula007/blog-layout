@@ -1,10 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>All Blog Posts</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog Posts</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -12,23 +11,24 @@
     <nav>
       <a href="index.html">Home</a>
       <a href="posts.html">Posts</a>
-      <a href="index.html#comment-form">Your Thoughts</a>
+      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </nav>
-    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
-  </header>
+  </header>  <main>
+    <section class="intro">
+      <h2>Recent Posts</h2>
+      <p>This section can later show blog post data from submissions.</p>
+      <ul>
+        <li>Post 1: Coming soon...</li>
+        <li>Post 2: Stay tuned!</li>
+      </ul>
+    </section><section id="comment-section">
+  <h3>Thoughts from Visitors</h3>
+  <p>This can be enhanced to show comments submitted from the form once Google Sheets integration is enabled.</p>
+</section>
 
-  <main>
-    <article>
-      <h2>A Colorful Blog Post</h2>
-      <p class="date">Published on April 22, 2025</p>
-      <p>This blog post showcases how to build a vibrant, modern blog layout with dark mode support and Google Forms integration for comments.</p>
-    </article>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 My Colorful Blog</p>
+  </main>  <footer>
+    <p>&copy; 2025 My Colorful Blog. All rights reserved.</p>
   </footer>
-
   <script src="script.js"></script>
 </body>
 </html>
