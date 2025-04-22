@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Blog Posts</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
+<body class="theme-light">
+
   <header>
-    <h1>Recent Blog Posts</h1>
+    <h1>Blog Posts</h1>
     <nav>
       <a href="index.html">Home</a>
       <a href="posts.html">View Posts</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQeTJIO5dbwqNjQIzwuhFCnYe-FLSfCePAxFUuBve545WOGw/viewform" target="_blank">Submit a Post</a>
     </nav>
   </header>
 
-  <main>
-    <article>
-      <h2>Sample Post Title</h2>
-      <p><strong>Author:</strong> Sample Author</p>
-      <p>This is a sample blog post content. Replace this with real content from Google Form responses.</p>
-    </article>
+  <div class="theme-controls">
+    <button onclick="setTheme('theme-light')">Light</button>
+    <button onclick="setTheme('theme-blue')">Blue</button>
+    <button onclick="setTheme('theme-pink')">Pink</button>
+    <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+  </div>
 
-    <!-- Add more posts here manually or with JavaScript later -->
+  <main>
+    <section>
+      <h2>Latest Posts</h2>
+
+      <!-- Sample Blog Post -->
+      <article class="post-card">
+        <h3>First Blog Post</h3>
+        <p><strong>Author:</strong> Mridula S</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. #angular</p>
+      </article>
+
+      <article class="post-card">
+        <h3>My Experience with Web Design</h3>
+        <p><strong>Author:</strong> Guest User</p>
+        <p>I recently created a blog using HTML, CSS, and JavaScript. I also used #angular for fun!</p>
+      </article>
+
+      <!-- Add more <article> blocks here manually from form responses -->
+    </section>
   </main>
 
   <footer>
     <p>Created by Mridula S</p>
   </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+
+    function setTheme(theme) {
+      document.body.className = theme;
+    }
+  </script>
 </body>
 </html>
