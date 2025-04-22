@@ -5,24 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blog Post</title>
   <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Blog Posts</h1>
-    <nav>
-      <a href="index.html">Home</a> &gt; <a href="posts.html">Posts</a>
-    </nav>
+  <header class="header">
+    <div class="container">
+      <h1>Blog Posts</h1>
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a> › <a href="posts.html">Posts</a> › <span>Current Post</span>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <article>
-      <h2>Post Title</h2>
-      <p>Post content goes here...</p>
+  <main class="container">
+    <article class="post">
+      <h2 class="post-title">Your Awesome Blog Title</h2>
+      <p class="post-date">Published on April 22, 2025</p>
+      <div class="post-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet facilisis urna. Praesent ultrices leo at lacus dapibus, in dignissim libero placerat.</p>
+        <p>Vivamus tempor, libero vel fermentum hendrerit, velit mi fringilla dolor, nec tincidunt elit nulla vel quam.</p>
+      </div>
     </article>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Your Name</p>
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
   </footer>
 </body>
 </html>
