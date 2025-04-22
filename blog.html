@@ -1,27 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Blog Posts</title>
-  <link rel="stylesheet" href="styles.css" />
+  <title>Blog</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
+  <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
   <header>
-    <h1>All <span>Blog Posts</span></h1>
+    <h1>My Blog</h1>
     <nav>
       <a href="index.html">Home</a>
+      <a href="blog.html">Blog</a>
       <a href="thoughts.html">Thoughts</a>
-      <a href="post.html">Create Post</a>
     </nav>
-    <button id="toggle-dark">Toggle Dark Mode</button>
   </header>
 
   <main>
-    <h2>Posts will appear here (fetched from Google Sheets)</h2>
-    <!-- Placeholder for dynamic posts -->
+    <h2>Submit a Blog Post</h2>
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeX0mBoAGpiRbk0r2EIEEkGGX5hgi4WS3OCZNLz8EefETQaIA/viewform?embedded=true" width="100%" height="800">Loading…</iframe>
+
+    <h2>Submitted Blog Posts</h2>
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTEXAMPLE12345/pubhtml?widget=true&amp;headers=false" width="100%" height="600"></iframe>
   </main>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 My Blog</p>
+  </footer>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+    }
+    window.onload = () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark-mode');
+      }
+    }
+  </script>
 </body>
 </html>
