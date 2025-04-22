@@ -16,7 +16,6 @@
   --footer-bg: #1f1f1f;
 }
 
-/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -52,7 +51,12 @@ body {
 
 .header h1 {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #f9f9f9;
+  margin-top: 0.5rem;
 }
 
 .toggle-btn {
@@ -74,6 +78,7 @@ body {
   color: white;
 }
 
+/* Breadcrumb */
 .breadcrumb {
   font-size: 0.9rem;
   color: #f8f8f8;
@@ -89,7 +94,58 @@ body {
   color: #fce4ec;
 }
 
-/* Post */
+/* About Section */
+.about-section {
+  margin-top: 2rem;
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.about-section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Posts Section */
+.posts-section {
+  margin-top: 3rem;
+}
+
+.posts-section h2 {
+  margin-bottom: 1.5rem;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.post-card {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+}
+
+.post-card h3 a {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.card-date {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0.5rem 0;
+}
+
+/* Blog Post Content */
 .post {
   background: var(--card-bg);
   padding: 2rem;
@@ -107,7 +163,6 @@ body {
   font-size: 2.2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--text-color);
 }
 
 .post-date {
@@ -132,7 +187,11 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+  }
+
   .header h1 {
     font-size: 2rem;
   }
