@@ -8,34 +8,19 @@
 </head>
 <body>
   <header>
-    <h1>All Blog Posts</h1>
+    <h1>All <span>Blog Posts</span></h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
       <a href="thoughts.html">Thoughts</a>
-      <button id="theme-toggle">Toggle Dark Mode</button>
+      <a href="post.html">Create Post</a>
     </nav>
+    <button id="toggle-dark">Toggle Dark Mode</button>
   </header>
 
   <main>
-    <section>
-      <h2>Recent Posts</h2>
-      <p>Submissions are collected via the form below and displayed here (data pulling can be added via Apps Script or Sheet API).</p>
-      <ul>
-        <li><strong>Example Post 1</strong>: This is a sample blog post.</li>
-        <li><strong>Example Post 2</strong>: Another example blog entry.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>Submit a New Blog Post</h2>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe0UEurE81xRkwZk6AkDGLERzyqMHBeKmP5cVZbYPg6aYVz-Q/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </section>
+    <h2>Posts will appear here (fetched from Google Sheets)</h2>
+    <!-- Placeholder for dynamic posts -->
   </main>
-
-  <footer>
-    <p>&copy; 2025 Your Blog</p>
-  </footer>
 
   <script src="script.js"></script>
 </body>
