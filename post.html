@@ -1,40 +1,41 @@
----
-layout: home
-title: "Posts"
-permalink: /posts/
-author_profile: true
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Posts</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Blog Posts</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="post.html">Posts</a>
+    </nav>
+  </header>
 
-<!-- Welcome Section -->
-<div class="page__custom-message">
-  <h2>Welcome to the Blog Posts Page!</h2>
-  <p>Explore the latest blogs shared by our contributors. Click a title to read more.</p>
-</div>
+  <main>
+    <section id="posts"></section>
+  </main>
 
-<!-- Blog Post List -->
-<ul class="post-list">
-  {% for post in paginator.posts %}
-    <li class="post-item">
-      <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
-      <p class="post-meta">
-        {{ post.date | date: "%B %d, %Y" }}{% if post.author %} • by {{ post.author }}{% endif %}
-      </p>
-      <p>{{ post.excerpt | strip_html | truncate: 150 }}</p>
-    </li>
-  {% endfor %}
-</ul>
-
-<!-- Pagination -->
-{% if paginator.total_pages > 1 %}
-  <nav class="pagination">
-    {% if paginator.previous_page %}
-      <a href="{{ paginator.previous_page_path | relative_url }}">&laquo; Previous</a>
-    {% endif %}
-
-    <span>Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-
-    {% if paginator.next_page %}
-      <a href="{{ paginator.next_page_path | relative_url }}">Next &raquo;</a>
-    {% endif %}
-  </nav>
-{% endif %}
+  <script>
+    const container = document.getElementById('posts');
+    const posts = JSON.parse(localStorage.getItem('posts') || '[]');
+    if (posts.length === 0) {
+      container.innerHTML = "<p>No posts yet. Create one on the home page.</p>";
+    } else {
+      posts.reverse().forEach(post => {
+        const div = document.createElement('div');
+        div.className = 'post';
+        div.innerHTML = `
+          <h2>${post.title}</h2>
+          <p>${post.content}</p>
+          <small>${new Date(post.timestamp).toLocaleString()}</small>
+        `;
+        container.appendChild(div);
+      });
+    }
+  </script>
+</body>
+</html>
