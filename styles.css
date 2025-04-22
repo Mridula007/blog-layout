@@ -1,48 +1,70 @@
+:root {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --accent-color: #00ffff;
+  --header-color: #1e1e1e;
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
   margin: 0;
-  padding: 0;
-  background: #fff;
-  color: #000;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 header {
-  background: #0080ff;
-  color: white;
-  padding: 1em;
+  background-color: var(--header-color);
+  padding: 1rem;
   text-align: center;
+  border-bottom: 2px solid var(--accent-color);
+}
+
+h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+nav {
+  margin-top: 1rem;
 }
 
 nav a {
-  margin: 0 10px;
-  color: white;
+  margin: 0 1rem;
+  color: var(--accent-color);
   text-decoration: none;
+  font-weight: bold;
 }
 
-button {
-  margin-left: 20px;
-  padding: 0.5em;
+nav a:hover {
+  text-decoration: underline;
+}
+
+button#theme-toggle {
+  background: var(--accent-color);
+  color: var(--bg-color);
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
 }
 
 main {
-  padding: 1em;
+  padding: 2rem;
 }
 
-.post, .comment {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1em;
-  margin-bottom: 1em;
-  background-color: #f9f9f9;
+iframe {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2);
 }
 
-/* Dark mode */
-.dark-mode {
-  background: #121212;
-  color: #e0e0e0;
-}
-
-.dark-mode .post, .dark-mode .comment {
-  background-color: #1e1e1e;
-  border-color: #333;
+footer {
+  background-color: var(--header-color);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
 }
