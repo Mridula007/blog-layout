@@ -1,78 +1,48 @@
-/* Themes */
-body.theme-light {
-  --bg-color: #fff;
-  --text-color: #000;
-}
-body.theme-blue {
-  --bg-color: #e0f7fa;
-  --text-color: #01579b;
-}
-body.theme-pink {
-  --bg-color: #fce4ec;
-  --text-color: #880e4f;
-}
-body.dark-mode {
-  --bg-color: #121212;
-  --text-color: #fff;
-}
-
-/* Global */
 body {
-  background-color: var(--bg-color);
-  color: var(--text-color);
   font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
-  transition: 0.3s;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
 }
 
-header, footer {
-  background-color: #6200ea;
+header {
+  background: #333;
   color: #fff;
-  padding: 15px;
+  padding: 1em;
   text-align: center;
 }
 
 nav a {
+  margin: 0 1em;
   color: #fff;
   text-decoration: none;
-  margin: 0 10px;
-}
-
-.theme-controls {
-  text-align: center;
-  margin: 15px;
-}
-.theme-controls button {
-  margin: 5px;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 6px;
-  background: #ddd;
-  cursor: pointer;
 }
 
 main {
-  padding: 20px;
-  text-align: center;
+  padding: 2em;
 }
 
 form input, form textarea {
-  width: 80%;
-  margin: 10px 0;
-  padding: 8px;
-  font-size: 16px;
+  display: block;
+  width: 100%;
+  margin: 1em 0;
+  padding: 0.5em;
 }
 
-form button {
-  padding: 10px 20px;
-  font-size: 16px;
+button {
+  background: #333;
+  color: #fff;
+  padding: 0.7em 1.5em;
+  border: none;
   cursor: pointer;
 }
 
-.post-card {
-  background: #f4f4f4;
-  padding: 15px;
-  margin: 15px;
-  border-radius: 8px;
-  text-align: left;
+.post {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 5px;
 }
