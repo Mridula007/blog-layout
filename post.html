@@ -1,48 +1,36 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A Colorful Blog Post</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog Post</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1>Blog Post</h1>
-      <button class="toggle-btn" onclick="toggleTheme()">Toggle Dark Mode</button>
-      <nav class="breadcrumb">
-        <a href="index.html">Home</a> › <span>A Colorful Blog Post</span>
-      </nav>
-    </div>
+  <header>
+    <h1>Blog Post</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="post.html">Posts</a>
+      <a href="thoughts.html">Your Thoughts</a>
+      <button id="toggle-dark">Toggle Dark Mode</button>
+    </nav>
   </header>
-
-  <main class="container">
-    <article class="post">
-      <h2 class="post-title">A Colorful Blog Post</h2>
-      <p class="post-date">Published on April 22, 2025</p>
-      <div class="post-content">
-        <p>This blog post showcases how to build a vibrant, modern blog layout with dark mode support and Google Forms integration for comments.</p>
-      </div>
+  <main>
+    <article class="blog-post">
+      <h2>A Colorful Blog Post</h2>
+      <p><strong>Published on April 22, 2025</strong></p>
+      <p>This blog post showcases how to build a vibrant, modern blog layout with dark mode support and Google Forms integration for comments.</p>
     </article>
 
-    <section class="comment-section">
+    <section class="comments">
       <h3>Leave a Comment</h3>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdxzGx0CM7k5KxVjxVYm_PzPqgZAh90i4bdCNS3JOlbq5mgEg/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdanUrwXmdKpnzJ0zjwwIb5NPYUXTqLtCyarq6BKBBnidlwjw/viewform?embedded=true" width="100%" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Your Name. All rights reserved.</p>
-    </div>
+  <footer>
+    <p>&copy; 2025 My Blog. All rights reserved.</p>
   </footer>
-
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      html.setAttribute('data-theme', html.getAttribute('data-theme') === 'light' ? 'dark' : 'light');
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
