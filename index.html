@@ -2,18 +2,17 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My Blog</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body class="theme-light">
 
   <header>
-    <h1>Welcome to Our Blog</h1>
+    <h1>Simple Blog Layout</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="posts.html">View Posts</a>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfQeTJIO5dbwqNjQIzwuhFCnYe-FLSfCePAxFUuBve545WOGw/viewform" target="_blank">Submit a Post</a>
+      <a href="posts.html">Posts</a>
     </nav>
   </header>
 
@@ -25,10 +24,13 @@
   </div>
 
   <main>
-    <section>
-      <h2>Start Reading or Share Your Thoughts</h2>
-      <p>Click "View Posts" to read what others have shared, or "Submit a Post" to share your ideas.</p>
-    </section>
+    <h2>Create a New Blog Post</h2>
+    <form id="postForm">
+      <input type="text" id="title" placeholder="Post Title" required><br/>
+      <input type="text" id="author" placeholder="Author Name" required><br/>
+      <textarea id="content" placeholder="Write your post here..." required></textarea><br/>
+      <button type="submit">Add Post</button>
+    </form>
   </main>
 
   <footer>
@@ -43,6 +45,20 @@
     function setTheme(theme) {
       document.body.className = theme;
     }
+
+    const form = document.getElementById("postForm");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const title = document.getElementById("title").value;
+      const author = document.getElementById("author").value;
+      const content = document.getElementById("content").value;
+      const post = { title, author, content };
+      let posts = JSON.parse(localStorage.getItem("posts")) || [];
+      posts.unshift(post);
+      localStorage.setItem("posts", JSON.stringify(posts));
+      alert("Post added!");
+      form.reset();
+    });
   </script>
 </body>
 </html>
