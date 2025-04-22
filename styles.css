@@ -4,14 +4,14 @@ body {
   padding: 0;
   background: #fff;
   color: #000;
-  transition: all 0.3s ease;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 header {
   background: linear-gradient(to right, #ff512f, #dd2476);
   color: white;
   text-align: center;
-  padding: 1em 0;
+  padding: 1.5em 0;
 }
 
 nav {
@@ -22,39 +22,81 @@ nav a {
   margin: 0 1em;
   color: white;
   text-decoration: none;
-  font-size: 1.2em;
+  font-weight: bold;
+  font-size: 1.1em;
 }
 
 button {
   margin-top: 1em;
-  padding: 0.5em 1em;
+  padding: 0.6em 1.2em;
   font-size: 1em;
   border-radius: 10px;
+  background-color: #ffffff;
+  color: #dd2476;
+  border: none;
   cursor: pointer;
 }
 
-.blog-post, .comment-section, #your-thoughts {
-  background: #fdeee6;
-  margin: 2em auto;
+main {
+  padding: 2em;
+}
+
+.blog-post {
+  background: #fff8f0;
+  margin: 1.5em 0;
   padding: 1.5em;
-  width: 90%;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-left: 6px solid #ff6a00;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.blog-post h3 {
+  color: #ff512f;
+}
+
+.comment-section, #your-thoughts {
+  background: #f3f7ff;
+  padding: 1.5em;
+  border-radius: 10px;
+  margin-top: 2em;
+}
+
+iframe {
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5em 0;
+  margin-top: 3em;
 }
 
 .dark-mode {
-  background: #121212;
-  color: #f0f0f0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode header {
+  background: linear-gradient(to right, #333, #555);
 }
 
 .dark-mode .blog-post,
 .dark-mode .comment-section,
 .dark-mode #your-thoughts {
-  background: #2c2c2c;
+  background-color: #2e2e2e;
   color: #f0f0f0;
 }
 
-iframe {
-  border: none;
-  border-radius: 10px;
+.dark-mode nav a,
+.dark-mode footer {
+  color: #ddd;
+}
+
+.dark-mode button {
+  background-color: #444;
+  color: #fff;
 }
