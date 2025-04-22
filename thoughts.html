@@ -3,54 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thoughts</title>
+  <title>Share Your Thoughts</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Your Thoughts</h1>
+    <h1>Share Your Thoughts</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="blog.html">Posts</a>
+      <a href="blog.html">Blog</a>
       <a href="thoughts.html">Thoughts</a>
-      <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
+      <button id="theme-toggle">Toggle Dark Mode</button>
     </nav>
   </header>
 
   <main>
     <section>
-      <h2>Leave a Thought</h2>
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc9LOQoz1hke0sWfNgpVSR4xVt5ELzzMGKfSmHK6ZGo34hZag/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </section>
-
-    <section>
-      <h2>All Comments</h2>
-      <div id="comments-container">Loading comments...</div>
+      <h2>We Value Your Thoughts</h2>
+      <p>Use the form below to share your thoughts with us:</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfrsekk1v6pSCBHOaH_LzlkihRDaJ2G2vgwJ8TxRk_mVEXK0g/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
   </main>
 
-  <script>
-    const commentSheet = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRUGCyqQNY02KgLfruEZ7yGoV8iX5kx7-R3c4SAVpXWzNGrNK_JdTngvLUB-uPbXhVR3z4hMmf4HTx9/pub?output=csv';
+  <footer>
+    <p>&copy; 2025 Your Blog</p>
+  </footer>
 
-    fetch(commentSheet)
-      .then(response => response.text())
-      .then(data => {
-        const rows = data.split('\n').slice(1);
-        const container = document.getElementById('comments-container');
-        container.innerHTML = '';
-        rows.forEach(row => {
-          const [timestamp, name, message] = row.split(',');
-          if (name && message) {
-            const comment = document.createElement('div');
-            comment.className = 'comment';
-            comment.innerHTML = `<strong>${name}</strong><p>${message}</p>`;
-            container.appendChild(comment);
-          }
-        });
-      })
-      .catch(err => {
-        document.getElementById('comments-container').innerHTML = '<p>Failed to load comments.</p>';
-      });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
