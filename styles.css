@@ -2,101 +2,76 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: #fff;
-  color: #000;
-  transition: background 0.4s ease, color 0.4s ease;
+  background: linear-gradient(to right, #fceabb, #f8b500);
+  color: #333;
+  transition: background 0.3s, color 0.3s;
 }
 
-header {
-  background: linear-gradient(to right, #ff512f, #dd2476);
-  color: white;
+header, footer {
   text-align: center;
-  padding: 1.5em 0;
+  padding: 1rem;
+  background: #fff4e6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 nav {
-  margin: 1em 0;
+  margin: 1rem 0;
 }
 
 nav a {
-  margin: 0 1em;
-  color: white;
+  margin: 0 1rem;
   text-decoration: none;
+  color: #e65100;
   font-weight: bold;
-  font-size: 1.1em;
 }
 
 button {
-  margin-top: 1em;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  border-radius: 10px;
-  background-color: #ffffff;
-  color: #dd2476;
+  padding: 0.5rem 1rem;
   border: none;
+  background-color: #ff9800;
+  color: white;
+  border-radius: 8px;
   cursor: pointer;
+  font-size: 1rem;
 }
 
 main {
-  padding: 2em;
+  padding: 2rem;
 }
 
-.blog-post {
+article {
   background: #fff8f0;
-  margin: 1.5em 0;
-  padding: 1.5em;
-  border-left: 6px solid #ff6a00;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-.blog-post h3 {
-  color: #ff512f;
+.date {
+  color: #999;
 }
 
-.comment-section, #your-thoughts {
-  background: #f3f7ff;
-  padding: 1.5em;
-  border-radius: 10px;
-  margin-top: 2em;
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
 }
 
-iframe {
-  width: 100%;
-  border: none;
-  border-radius: 10px;
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #f1f1f1;
 }
 
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 1.5em 0;
-  margin-top: 3em;
+body.dark header,
+body.dark footer,
+body.dark article {
+  background: #1e1e1e;
+  color: #f1f1f1;
 }
 
-.dark-mode {
-  background-color: #121212;
-  color: #e0e0e0;
+body.dark nav a {
+  color: #ffa726;
 }
 
-.dark-mode header {
-  background: linear-gradient(to right, #333, #555);
-}
-
-.dark-mode .blog-post,
-.dark-mode .comment-section,
-.dark-mode #your-thoughts {
-  background-color: #2e2e2e;
-  color: #f0f0f0;
-}
-
-.dark-mode nav a,
-.dark-mode footer {
-  color: #ddd;
-}
-
-.dark-mode button {
-  background-color: #444;
-  color: #fff;
+body.dark button {
+  background-color: #f57c00;
 }
