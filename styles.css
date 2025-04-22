@@ -1,77 +1,81 @@
+/* General Styles */
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(to right, #fceabb, #f8b500);
-  color: #333;
+  background: var(--bg-color);
+  color: var(--text-color);
   transition: background 0.3s, color 0.3s;
 }
 
-header, footer {
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222;
+  --accent-color: #ff6f61;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+}
+
+header {
+  background: var(--accent-color);
+  padding: 1em;
   text-align: center;
-  padding: 1rem;
-  background: #fff4e6;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: #fff;
 }
 
 nav {
-  margin: 1rem 0;
+  margin-top: 1em;
 }
 
 nav a {
-  margin: 0 1rem;
+  margin: 0 1em;
   text-decoration: none;
-  color: #e65100;
+  color: #fff;
   font-weight: bold;
 }
 
-button {
-  padding: 0.5rem 1rem;
+nav button {
+  margin-left: 1em;
+  padding: 0.5em 1em;
   border: none;
-  background-color: #ff9800;
-  color: white;
-  border-radius: 8px;
+  background-color: #fff;
+  color: var(--accent-color);
   cursor: pointer;
-  font-size: 1rem;
+  border-radius: 5px;
 }
 
-main {
-  padding: 2rem;
-}
-
-article {
-  background: #fff8f0;
-  padding: 1.5rem;
+.intro, #comment-section, #create-post {
+  padding: 2em;
+  max-width: 800px;
+  margin: auto;
+  background-color: rgba(255,255,255,0.9);
   border-radius: 12px;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin-bottom: 2em;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.date {
-  color: #999;
+body.dark-mode .intro,
+body.dark-mode #comment-section,
+body.dark-mode #create-post {
+  background-color: rgba(33, 33, 33, 0.9);
 }
 
 h1, h2, h3 {
-  font-family: 'Georgia', serif;
+  color: var(--accent-color);
 }
 
-/* Dark Mode */
-body.dark {
-  background: #121212;
-  color: #f1f1f1;
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--accent-color);
+  color: #fff;
 }
 
-body.dark header,
-body.dark footer,
-body.dark article {
-  background: #1e1e1e;
-  color: #f1f1f1;
-}
-
-body.dark nav a {
-  color: #ffa726;
-}
-
-body.dark button {
-  background-color: #f57c00;
+iframe {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
 }
