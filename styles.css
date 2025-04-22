@@ -1,48 +1,105 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+/* Reset & Base Styles */
+* {
   margin: 0;
   padding: 0;
-  background: #f9f9f9;
-  color: #333;
+  box-sizing: border-box;
 }
 
-header {
-  background: #333;
-  color: #fff;
-  padding: 1em;
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f4f6f8;
+  color: #2c3e50;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding: 2rem 1rem;
   text-align: center;
+  border-bottom: 4px solid #1abc9c;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-nav a {
-  margin: 0 1em;
-  color: #fff;
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+  font-size: 0.9rem;
+  color: #ecf0f1;
+}
+
+.breadcrumb a {
+  color: #1abc9c;
   text-decoration: none;
 }
 
-main {
-  padding: 2em;
+.breadcrumb span {
+  color: #bdc3c7;
 }
 
-form input, form textarea {
-  display: block;
-  width: 100%;
-  margin: 1em 0;
-  padding: 0.5em;
-}
-
-button {
-  background: #333;
-  color: #fff;
-  padding: 0.7em 1.5em;
-  border: none;
-  cursor: pointer;
-}
-
+/* Post Styling */
 .post {
   background: #fff;
-  border: 1px solid #ddd;
-  margin: 1em 0;
-  padding: 1em;
-  border-radius: 5px;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+}
+
+.post-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.post-date {
+  font-size: 0.85rem;
+  color: #7f8c8d;
+  margin-bottom: 1.5rem;
+}
+
+.post-content p {
+  margin-bottom: 1.2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: #ecf0f1;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .post-title {
+    font-size: 1.6rem;
+  }
 }
