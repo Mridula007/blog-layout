@@ -1,88 +1,71 @@
-:root {
-  --bg-color: #ffffff;
-  --text-color: #111111;
-  --accent-color: #ff6f61;
-  --card-bg: #fdf1f0;
-  --button-bg: #fff;
-  --button-text: #ff6f61;
-}
-
-[data-theme="dark"] {
-  --bg-color: #121212;
-  --text-color: #f1f1f1;
-  --accent-color: #64b5f6;
-  --card-bg: #1e1e1e;
-  --button-bg: #1e1e1e;
-  --button-text: #64b5f6;
-}
-
-* {
-  box-sizing: border-box;
+body {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: var(--bg-color);
-  color: var(--text-color);
+  background-color: #fff;
+  color: #222;
   transition: all 0.3s ease;
-  line-height: 1.6;
 }
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.header, .footer {
-  background-color: var(--accent-color);
-  color: #fff;
-  padding: 20px;
+header {
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  color: white;
+  padding: 1em;
   text-align: center;
 }
 
-.toggle-btn {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background: var(--button-bg);
-  color: var(--button-text);
-  border: 2px solid var(--accent-color);
-  cursor: pointer;
-  border-radius: 6px;
-  font-weight: bold;
+nav {
+  margin-top: 1em;
 }
 
-.intro, .post-card, .post, .comment-section {
-  background: var(--card-bg);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
-
-a {
-  color: var(--accent-color);
+nav a {
+  color: white;
+  margin: 0 1em;
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
+main {
+  padding: 2em;
 }
 
-.post-title {
-  margin-top: 0;
+.blog-post, .comments, .thoughts-form, .intro {
+  background: #fef1ec;
+  padding: 1.5em;
+  border-radius: 10px;
+  margin-bottom: 2em;
 }
 
-.comment-section iframe {
+button#toggle-dark {
+  margin-left: 1em;
+  padding: 0.4em 1em;
+  background: white;
   border: none;
-  width: 100%;
-  border-radius: 8px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
-  .toggle-btn {
-    width: 100%;
-    margin-top: 10px;
-  }
+/* Dark Mode */
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
+}
+
+body.dark-mode header {
+  background: linear-gradient(45deg, #111, #444);
+}
+
+body.dark-mode .blog-post,
+body.dark-mode .comments,
+body.dark-mode .thoughts-form,
+body.dark-mode .intro {
+  background: #1e1e1e;
+}
+
+body.dark-mode nav a {
+  color: #ddd;
+}
+
+body.dark-mode button#toggle-dark {
+  background: #444;
+  color: #fff;
 }
