@@ -1,4 +1,4 @@
-/* Reset & Base Styles */
+/* Reset and Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ body {
   color: #bdc3c7;
 }
 
-/* Post Styling */
+/* Blog Post */
 .post {
   background: #fff;
   padding: 2rem;
@@ -93,7 +93,7 @@ body {
   border-top: 1px solid #ddd;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 600px) {
   .header h1 {
     font-size: 2rem;
