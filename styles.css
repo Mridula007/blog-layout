@@ -1,19 +1,26 @@
 body {
   font-family: 'Segoe UI', sans-serif;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
-h1, h2, h4 {
-  color: #343a40;
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
 }
 
 .navbar {
-  border-radius: 0;
-}
-
-.container {
-  padding-top: 20px;
+  border-radius: 0.5rem;
 }
 
 iframe {
-  border-radius: 10px;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.container h2 {
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin: 10px 5px;
 }
