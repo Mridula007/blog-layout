@@ -3,22 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <title>My Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
-<body>
-  <button id="darkModeToggle">Toggle Dark Mode</button>
-  <header>
-    <h1>My Blog</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="blog.html">Blog</a>
-      <a href="thoughts.html">Thoughts</a>
-    </nav>
-  </header>
-  <main>
-    <h2>Submit a Blog Post</h2>
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSefGdPDljFYCrAHiJ9jPdpXv7yOU2Hk0fHRiL8ahQINHTYIrg/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </main>
+<body class="bg-light text-dark">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="#">My Blog</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Posts</a></li>
+        <li class="nav-item"><a class="nav-link" href="create.html">Create Post</a></li>
+        <li class="nav-item"><a class="nav-link" href="thoughts.html">Thoughts</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container text-center py-5">
+  <h1 class="display-4">Welcome to My Blog!</h1>
+  <p class="lead">Your personal space to share your ideas and read others' thoughts.</p>
+  <a href="blog.html" class="btn btn-primary mt-3">Explore Posts</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
