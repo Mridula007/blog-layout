@@ -1,34 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Blog - Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="bg-light text-dark">
-
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="container">
-    <a class="navbar-brand" href="#">My Blog</a>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="blog.html">Posts</a></li>
-        <li class="nav-item"><a class="nav-link" href="create.html">Create Post</a></li>
-        <li class="nav-item"><a class="nav-link" href="thoughts.html">Thoughts</a></li>
-      </ul>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="#">My Blog</a>
+      <button class="btn btn-light" id="darkModeToggle">Dark Mode</button>
     </div>
+  </nav>
+
+  <div class="container mt-4 text-center">
+    <h1>Welcome to My Blog</h1>
+    <p>A clean, colorful, modern blogging site.</p>
+    <a href="blog.html" class="btn btn-success">View Blog Posts</a>
+    <a href="create.html" class="btn btn-warning">Create a Post</a>
+    <a href="thoughts.html" class="btn btn-info">Thoughts & Comments</a>
   </div>
-</nav>
 
-<div class="container text-center py-5">
-  <h1 class="display-4">Welcome to My Blog!</h1>
-  <p class="lead">Your personal space to share your ideas and read others' thoughts.</p>
-  <a href="blog.html" class="btn btn-primary mt-3">Explore Posts</a>
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
