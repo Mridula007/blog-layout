@@ -1,54 +1,19 @@
 body {
-  font-family: 'Comic Sans MS', sans-serif;
-  background-color: #f0fdf4;
-  color: #222;
-  margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-header {
-  background-color: #cce7ff;
-  padding: 1rem;
-  text-align: center;
+h1, h2, h4 {
+  color: #343a40;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+.navbar {
+  border-radius: 0;
 }
 
-nav {
-  margin-top: 0.5rem;
+.container {
+  padding-top: 20px;
 }
 
-nav a {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #0077cc;
-  font-weight: bold;
-}
-
-main {
-  padding: 2rem;
-}
-
-.dark-mode {
-  background-color: #111;
-  color: #eee;
-}
-
-.dark-mode header {
-  background-color: #222;
-}
-
-.dark-mode nav a {
-  color: #66ccff;
-}
-
-button#darkModeToggle {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  padding: 5px 10px;
-  font-family: monospace;
+iframe {
+  border-radius: 10px;
 }
