@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Thoughts & Comments</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Thoughts</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="index.html">My Blog</a>
-      <button class="btn btn-light" id="darkModeToggle">Dark Mode</button>
+        <header class="my-4">
+            <h1 class="text-center">Share Your Thoughts</h1>
+        </header>
+
+        <!-- Google Form Embed for Thoughts Submission -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSduQ0GJ95vlpSHHAlcA8mnMJ-iOK3kGjzwxnLgXnmy6nFbsTg/viewform?embedded=true"
+                width="640" height="620" frameborder="0" marginheight="0" marginwidth="0">
+                Loading…
+        </iframe>
+
+        <footer>
+            <p>&copy; 2025 My Blog</p>
+        </footer>
     </div>
-  </nav>
 
-  <div class="container mt-4">
-    <h2>Thoughts & Comments</h2>
-    <iframe src="https://docs.google.com/forms/d/e/YOUR-COMMENT-FORM-ID/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
